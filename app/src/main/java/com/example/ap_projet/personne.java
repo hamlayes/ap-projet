@@ -1,6 +1,8 @@
 package com.example.ap_projet;
 
-public class personne {
+import java.io.Serializable;
+
+public class personne implements Serializable {
     private String pseudo;
     private float taille;
     private float poids;
@@ -44,7 +46,7 @@ public class personne {
     }
 
     public String toString(){
-        return "   "+pseudo + " " + calculerImc() + " " + interpretationIMC();
+        return " "+pseudo + " votre IMC est de " + calculerImc() + " " + interpretationIMC();
     }
 
 }
